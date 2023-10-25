@@ -4,8 +4,8 @@
 
 Welcome to the frontend of the Credit Card Validator application. This README will guide you on how to set up, run, and test both the frontend and the backend of our application.
 
-![Credit Card Validation](image-1.png)
-![Credit Card Validation](image-3.png)
+![Credit Card Validation](public/images/image-1.png)
+![Credit Card Validation](public/images/image-3.png)
 
 ## Prerequisites
 
@@ -53,7 +53,7 @@ npm run dev:watch
 Once started, the backend server will be available at http://localhost:4000. The backend also serves the Swagger documentation at http://localhost:4000/docs/.
 
 Docs: 
-![DocsAlt text](image.png)
+![DocsAlt text](public/images/image.png)
 
 ### Testing the Backend
 To run the backend tests:
