@@ -1,0 +1,51 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: Credit Card Validator API
+  description: An API to validate credit card numbers based on the Luhn algorithm.
+
+servers:
+  - url: http://localhost:4000
+
+paths:
+  /validate-card:
+    post:
+      summary: Validates a credit card number.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - cardNumber
+              properties:
+                cardNumber:
+                  type: string
+                  description: The credit card number to be validated.
+                  example: "4111111111111111"
+      responses:
+        '200':
+          description: The credit card number is valid.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                    example: true
+        '400':
+          description: The credit card number is invalid.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  valid:
+                    type: boolean
+                    example: false
+                  message:
+                    type: string
+                    example: "cardNumber with value 1234567812345678 fails to match the required pattern."
+
